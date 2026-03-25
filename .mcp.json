@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "edgartools": {
+      "command": "uvx",
+      "args": ["--from", "edgartools", "edgar-mcp"],
+      "env": {
+        "EDGAR_IDENTITY": "${EDGAR_IDENTITY}"
+      }
+    }
+  }
+}
