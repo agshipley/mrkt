@@ -6,6 +6,18 @@ The core thesis — that clause-level drafting choices correlate with post-trans
 
 ---
 
+## Research and engineering at a glance
+
+**What was built:** A repeatable pipeline from merger-agreement text to clause-level structured data, expert-label validation, event and price data collection, and statistical sensitivity analysis. Four forced-tool extraction schemas encode legal distinctions that would be difficult to capture reliably through keyword matching alone. The repository includes separate scripts for extraction, outcome collection, returns, validation, regression, and influence diagnostics.
+
+**What the initial study shows:** Of 152 merger agreements from 2020–2021, 606 of 608 structured extraction attempts completed successfully. The stock-return analysis covers **78 deals with usable public-acquirer returns**, not the full agreement corpus. In that subset, target termination-fee size is negatively *associated* with subsequent acquirer abnormal returns in the tested specifications.
+
+**What it does not establish:** These are exploratory, retrospective associations—not a causal effect of deal terms, a validated trading strategy, or out-of-sample predictive performance. The subset is selected toward public strategic acquirers; the study concentrates on the pandemic period; return windows are anchored to signing dates rather than verified announcement timestamps; and unobserved deal characteristics may confound the relationship. See [Known Limitations](#known-limitations) before interpreting the [headline results](#headline-results).
+
+For a technical reviewer, the distinctive part is the **domain-specific measurement pipeline and its auditability**, not a claim that a statistically significant coefficient settles the underlying economic question.
+
+---
+
 ## Table of Contents
 
 1. [Headline Results](#headline-results)
