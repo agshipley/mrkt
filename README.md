@@ -2,11 +2,13 @@
 
 Mrkt is a research and analytics pipeline that tests whether negotiated terms in SEC-filed M&A merger agreements carry measurable economic signal. It extracts structured provisions from agreement text with LLM-backed tool calls (Anthropic Claude), links those provisions to deal-outcome and market-return data, and runs a layered battery of statistical tests (descriptives, nonparametric robustness, influence diagnostics, multivariate regression).
 
-The core thesis — that clause-level drafting choices correlate with post-transaction outcomes — is grounded in existing academic work (Coates/Palia/Wu 2019, Denis/Macias 2013, Officer 2003). Mrkt automates and scales what those papers did by hand, with a reproducible corpus, auditable tool schemas, and version-controlled analytical code.
+The core thesis — that clause-level drafting choices correlate with post-transaction outcomes — is grounded in existing academic work (Coates/Palia/Wu 2019, Denis/Macias 2013, Officer 2003). Mrkt experiments with scaling that analysis through an externally available corpus, auditable extraction schemas, and version-controlled analytical code. The generated study data are not bundled with this repository.
 
 ---
 
 ## Research and engineering at a glance
+
+> **Reproducibility boundary:** The extraction and analysis scripts are public, and the MAUD source corpus can be obtained separately (see [setup](#maud-corpus)). However, `data/` — including extraction responses, gathered market observations, and the final analysis panel — is excluded from Git. The README documents reported exploratory results; cloning this repository alone cannot reproduce or independently audit their exact numerical outputs. Dependencies are not locked to a release environment. A full reproduction requires rebuilding the dataset and preserving the resulting inputs and outputs.
 
 **What was built:** A repeatable pipeline from merger-agreement text to clause-level structured data, expert-label validation, event and price data collection, and statistical sensitivity analysis. Four forced-tool extraction schemas encode legal distinctions that would be difficult to capture reliably through keyword matching alone. The repository includes separate scripts for extraction, outcome collection, returns, validation, regression, and influence diagnostics.
 
